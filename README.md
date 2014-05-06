@@ -11,6 +11,21 @@ a URL structure similar to DNSimple's existing API. This is so that if DNSimple
 suddenly implements it (unlikely, I've asked), all the user must change is the
 hostname of the DDNS server.
 
+Intention
+---------
+
+This is intended to be a web service usable by anyone. It *should* be
+hosted over SSL so that API keys are encrypted in transit. 
+
+No user should ever give this app an API key for a domain that has a large
+amount of traffic. E.g., if a user wants to use home.example.com as their domain,
+it's better to create a second domain within DNSimple, dyn.example.com, and
+simply CNAME home.example.com to home.dyn.example.com. That way, no one can mess
+with anything else that's in example.com records.
+
+Using
+-----
+
 There are two endpoints to this app:
 
 ### `/`
