@@ -68,3 +68,4 @@ Known working configurations
 ----------------------------
 
 * inadyn packaged with DD-WRT v24-sp2 (04/15/13) std (SVN revision 21286)
+* inadyn packaged with DD-WRT v24-sp2 (10/10/09) vpn (SVN revision 13064)
