@@ -19,7 +19,7 @@ get business_url do
   record_id = params[:record_id]
   #unused
   #hostname = params[:hostname]
-  ip = params[:myip]
+  ip = params[:myip] || request.ip
 
   url = "https://dnsimple.com/domains/#{domain_id}/records/#{record_id}"
   payload = {"record" => {"content" => ip}}.to_json
