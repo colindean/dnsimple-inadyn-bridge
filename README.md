@@ -11,6 +11,9 @@ a URL structure similar to DNSimple's existing API. This is so that if DNSimple
 suddenly implements it (unlikely, I've asked), all the user must change is the
 hostname of the DDNS server.
 
+Not a DNSimple customer? [Check it out](https://dnsimple.com/r/454cd7929c285f)
+and help the author (@colindean) earn free service.
+
 Intention
 ---------
 
@@ -49,8 +52,13 @@ DNSimple, while the `record_id` is the numerical ID for the exact record that
 you want to update when hitting this endpoint.
 
 You must pass your email address and *domain* API key as username and password.
+The email address is not currently sent to DNSimple, so it could really be
+anything, but it is probably best to use your DNSimple email just in case this
+behavior changes.
+
 The `myip` query parameter to the URL contains the IP used to update, and is
-automatically added by `inadyn`.
+automatically added by `inadyn`. If this parameter is omitted, the request
+source IP will be used automatically.
 
 License
 -------
