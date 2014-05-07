@@ -15,7 +15,7 @@ Intention
 ---------
 
 This is intended to be a web service usable by anyone. It *should* be
-hosted over SSL so that API keys are encrypted in transit. 
+hosted over SSL so that API keys are encrypted in transit.
 
 No user should ever give this app an API key for a domain that has a large
 amount of traffic. E.g., if a user wants to use home.example.com as their domain,
@@ -48,3 +48,8 @@ License
 
 MIT. Look it up.
 
+External Links
+--------------
+
+* [Dyn API Return Codes](http://dyn.com/support/developers/api/return-codes/)
+* [DNSimple Domains/Records API docs](http://developer.dnsimple.com/domains/records/)
