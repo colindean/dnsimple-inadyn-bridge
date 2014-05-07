@@ -63,3 +63,8 @@ External Links
 * [Dyn API Return Codes](http://dyn.com/support/developers/api/return-codes/)
 * [DNSimple Domains/Records API docs](http://developer.dnsimple.com/domains/records/)
 * [inadyn readme/manpage](http://inatech.eu/inadyn/readme.html)
+
+Known working configurations
+----------------------------
+
+* inadyn packaged with DD-WRT v24-sp2 (04/15/13) std (SVN revision 21286)
