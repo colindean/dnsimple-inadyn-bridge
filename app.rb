@@ -49,7 +49,7 @@ get business_url do
 end
 
 get '/' do
-  @host = request.url
-  @url = business_url
+  @host = request.host + (request.port == 80 ? "" : ":"+request.port.to_s)
+  @url = '/domains/:domain_id/records/'
   erb :index, locals: {host: @host, url: @url}
 end

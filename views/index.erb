@@ -5,10 +5,12 @@
   </head>
   <body>
     <h1>DNSimple inadyn bridge</h1>
-    <p>Use this bridge to update DNSimple domains from an inadyn client, such as
-      those found on just about every router made in the last 10 years. This is
-      especially useful to DD-WRT and OpenWRT users!
+    <p>Use this bridge to update DNSimple domains from an <code>inadyn</code>
+      client, such as those found on just about every router made in the last 10
+      years. This is especially useful to DD-WRT and OpenWRT users!
     </p>
+    <p>Not a DNSimple customer? They're awesome folks who do great things for the software community.
+      <a href="https://dnsimple.com/r/454cd7929c285f">Become a customer and help me earn some free service.</a></p>
     <p>Configure your DDNS client as such:
     <table border="1" cellspacing="0" cellpadding="5">
       <tbody>
@@ -24,20 +26,30 @@
           <td>User name</td>
           <td>
             <p><i>your email address</i></p>
-            <p>Note that this is not currently sent to DNSimple and does not necessarily need to be your DNSimple account email address.</p>
+            <p>Note that this is not currently sent to DNSimple and does not
+              necessarily need to be your DNSimple account email address.
+              However, it's probably a good idea to use it in case you have
+              issues and you need to look through simple logs to see what you're
+              doing wrong.</p>
           </td>
         </tr>
         <tr>
           <td>Password</td>
-          <td><i>your DNSimple <b>domain API key</b></i></td>
+          <td>
+            <p><i>your DNSimple <b>domain API key</b></i></p>
+            <p>Get this key by copying it from the bottom of the domain
+              management page for the domain in which the hostname to be updated
+              lives.</p>
+          </td>
         </tr>
         <tr>
           <td>Hostname</td>
-          <td><i>unused, fill in whatever</i></td>
-        </tr>
-        <tr>
-          <td>IP Address</td>
-          <td><i>unused, fill in whatever</i></td>
+          <td>
+            <p><i>record ID number for the record to be updated</i></p>
+            <p>E.g. <code>123</code></p>
+            <p>Get this key by hovering over the black (i) on the advanced
+              domain manager page for a domain.</p>
+          </td>
         </tr>
         <tr>
           <td>URL</td>
