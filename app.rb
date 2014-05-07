@@ -19,7 +19,7 @@ get '/domains/:domain_id/records/:record_id' do
   #hostname = params[:hostname]
   ip = params[:myip]
 
-  url = "https://dnsimple.com/domains/#{domain_id}/records/#{record_id}.json"
+  url = "https://dnsimple.com/domains/#{domain_id}/records/#{record_id}"
   payload = {"record" => {"content" => ip}}.to_json
   headers = {accept: :json,
              content_type: :json,
