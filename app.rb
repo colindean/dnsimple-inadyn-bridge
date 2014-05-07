@@ -32,7 +32,7 @@ get business_url do
 
   res = RestClient.put url, payload, headers
 
-  case res.code
+  output = case res.code
   when 200
     saved_ip = JSON.parse(res.body)["record"]["content"]
     "good #{saved_ip}"
@@ -47,7 +47,9 @@ get business_url do
     "911"
   end
 
-  LOGGER.info "#{ehash} updating #{domain_id}/#{record_id} to #{ip}"
+  LOGGER.info "#{ehash} updating #{domain_id}/#{record_id} to #{ip}: #{output}"
+
+  return output
 
 end
 
