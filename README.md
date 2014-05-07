@@ -62,3 +62,4 @@ External Links
 
 * [Dyn API Return Codes](http://dyn.com/support/developers/api/return-codes/)
 * [DNSimple Domains/Records API docs](http://developer.dnsimple.com/domains/records/)
+* [inadyn readme/manpage](http://inatech.eu/inadyn/readme.html)
