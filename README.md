@@ -1,4 +1,4 @@
-DNSimple-DynDNS bridge
+DNSimple-inadyn bridge
 ======================
 
 This little app is meant to be hosted on Heroku and used as a custom endpoint
@@ -14,8 +14,17 @@ hostname of the DDNS server.
 Intention
 ---------
 
-This is intended to be a web service usable by anyone. It *should* be
-hosted over SSL so that API keys are encrypted in transit.
+This is intended to be a web service usable by anyone.
+
+`inadyn` does not have an option to send updates over SSL, so this app makes no
+provision to enable SSL. **API keys are thus sent in plaintext from your router
+to the bridge.** They are sent over SSL to DNSimple, but **are in plaintext from
+your router to this app because the client does not support SSL.** There, I said
+it and bolded it.
+
+Thus, you should trust this app very little. Use it at your own risk and host it
+only on systems whose owners you would trust having your domain API key for the
+domain in DNSimple that you use for dynamic hostnames!
 
 No user should ever give this app an API key for a domain that has a large
 amount of traffic. E.g., if a user wants to use home.example.com as their domain,
