@@ -5,7 +5,9 @@ require 'logger'
 
 LOGGER = Logger.new(STDOUT)
 
-get '/domains/:domain_id/records/:record_id' do
+business_url = '/domains/:domain_id/records/:record_id'
+
+get business_url do
   #get the email from username and the api_token from password
   @auth ||=  Rack::Auth::Basic::Request.new(request.env)
   unless @auth.provided? && @auth.basic? && @auth.credentials
@@ -31,13 +33,23 @@ get '/domains/:domain_id/records/:record_id' do
 
   case res.code
   when 200
-    "good #{ip}"
+    saved_ip = JSON.parse(res.body)["record"]["content"]
+    "good #{saved_ip}"
+    #"nochg #{ip}"
+  when 400
+    "dnserr"
+  when 401
+    "badauth"
+  when 404
+    "nohost"
   else
-    "nochg #{ip}" #could also be 'nohost' when the host doesn't exist? use if record_id doesn't exist
+    "911"
   end
 
 end
 
 get '/' do
-  erb :index
+  @host = request.url
+  @url = business_url
+  erb :index, locals: {host: @host, url: @url}
 end

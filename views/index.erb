@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DNSimple inadyn bridge</title>
+  </head>
+  <body>
+    <h1>DNSimple inadyn bridge</h1>
+    <p>Use this bridge to update DNSimple domains from an inadyn client, such as
+      those found on just about every router made in the last 10 years. This is
+      especially useful to DD-WRT and OpenWRT users!
+    </p>
+    <p>Configure your DDNS client as such:
+    <table border="1" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td>DDNS Service</td>
+          <td>Custom</td>
+        </tr>
+        <tr>
+          <td>DYNDNS Server</td>
+          <td><code><%= host %></code></td>
+        </tr>
+        <tr>
+          <td>User name</td>
+          <td>
+            <p><i>your email address</i></p>
+            <p>Note that this is not currently sent to DNSimple and does not necessarily need to be your DNSimple account email address.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><i>your DNSimple <b>domain API key</b></i></td>
+        </tr>
+        <tr>
+          <td>Hostname</td>
+          <td><i>unused, fill in whatever</i></td>
+        </tr>
+        <tr>
+          <td>IP Address</td>
+          <td><i>unused, fill in whatever</i></td>
+        </tr>
+        <tr>
+          <td>URL</td>
+          <td><%= url %></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
