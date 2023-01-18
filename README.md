@@ -1,3 +1,6 @@
+:warning: This is no longer maintained. Please use [DDNS.horse](https://ddns.horse)
+instead because it is maintained!
+
 DNSimple-inadyn bridge
 ======================
 
